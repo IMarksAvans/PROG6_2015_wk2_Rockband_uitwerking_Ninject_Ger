@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DependencyInjectionStarter.Library
 {
-    public class Vocal: IInstrument 
+    public class Keyboard : IInstrument
+
     {
         public string Play()
         {
-            return "Traaa laaa laaa la la";
+            return "pling pling plong";
         }
     }
 }

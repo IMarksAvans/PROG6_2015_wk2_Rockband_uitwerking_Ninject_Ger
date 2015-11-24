@@ -5,9 +5,9 @@ using System.Text;
 
 namespace DependencyInjectionStarter.Library
 {
-    public class BassGuitar
+    public class BassGuitar:IInstrument 
     {
-        public string PlayBassLine()
+        public string Play()
         {
             return "Boooow Boooow Boooooow";
         }

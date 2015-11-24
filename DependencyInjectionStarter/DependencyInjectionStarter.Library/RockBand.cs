@@ -8,17 +8,22 @@ namespace DependencyInjectionStarter.Library
 {
     public class RockBand
     {
-        private Guitar guitar = new Guitar();
-        private BassGuitar bassGuitar = new BassGuitar();
-        private Drums drums = new Drums();
-        private Vocal vocal = new Vocal();
+        private List<IInstrument> instruments = new List<IInstrument>();
 
         public void DoSoundCheck()
         {
-            Console.WriteLine(guitar.PlayRiff());
-            Console.WriteLine(bassGuitar.PlayBassLine());
-            Console.WriteLine(drums.Drum());
-            Console.WriteLine(vocal.Sing());
+            foreach(IInstrument instrument in instruments)
+            {
+                if(instrument != null)
+                {
+                    Console.WriteLine(instrument.Play());
+                }
+            }
+        }
+
+        public void AddInstrument(IInstrument instrument)
+        {
+            instruments.Add(instrument);
         }
     }
 }

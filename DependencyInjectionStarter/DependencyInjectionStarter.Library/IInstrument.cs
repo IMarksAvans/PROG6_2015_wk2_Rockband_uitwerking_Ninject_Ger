@@ -5,11 +5,8 @@ using System.Text;
 
 namespace DependencyInjectionStarter.Library
 {
-    public class Vocal: IInstrument 
+    public interface IInstrument
     {
-        public string Play()
-        {
-            return "Traaa laaa laaa la la";
-        }
+        String Play();
     }
 }
