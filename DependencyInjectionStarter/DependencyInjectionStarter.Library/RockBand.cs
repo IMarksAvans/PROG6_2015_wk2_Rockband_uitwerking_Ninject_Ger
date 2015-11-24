@@ -8,22 +8,23 @@ namespace DependencyInjectionStarter.Library
 {
     public class RockBand
     {
-        private List<IInstrument> instruments = new List<IInstrument>();
+        public List<IInstrument> Instruments { get; set; }
+
+
+        public RockBand(List<IInstrument> instruments)
+        {
+            this.Instruments = instruments;
+        }
 
         public void DoSoundCheck()
         {
-            foreach(IInstrument instrument in instruments)
+            foreach(IInstrument instrument in Instruments)
             {
                 if(instrument != null)
                 {
                     Console.WriteLine(instrument.Play());
                 }
             }
-        }
-
-        public void AddInstrument(IInstrument instrument)
-        {
-            instruments.Add(instrument);
         }
     }
 }
